@@ -6,7 +6,7 @@ server.use(express.json());
 server.use(logger);
 //use my routes
 const RecipeRouter = require("./routes/recipeRouter");
-server.use("/recipes", RecipeRouter);
+server.use("/recipes/", RecipeRouter);
 
 //nice confirmation message that this is actually running
 server.get("/", (req, res) => {
